@@ -5,7 +5,7 @@ class CreateSites < ActiveRecord::Migration[5.1]
       t.text :description
       t.string :imgpath
       t.string :category
-      t.picture :string
+      t.string :picture
       
       t.timestamps
     end
