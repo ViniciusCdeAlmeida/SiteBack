@@ -3,7 +3,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
   
   cloudinary_transformation :transformation => [
-    {:crop => "thumb"}
+    {:crop => "thumb", :quality => 40}
   ]
   
   # Include RMagick or MiniMagick support:
