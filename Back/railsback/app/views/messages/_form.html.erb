@@ -1,0 +1,22 @@
+<%= form_for @site do |f| %>
+<% cache f do %>
+<p>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+    <p>
+        <%= f.label :subject %>
+        <%= f.text_area :subject %>
+    </p>
+    <p>
+        <%= f.label :text %>
+        <%= f.text_field :text %>
+    </p>
+
+    <p>
+    <%= f.submit %>
+    </p>    
+</p>
+<% end %>
+<% end %>
+
+<%= link_to "Back to Main Page", sites_path%>
