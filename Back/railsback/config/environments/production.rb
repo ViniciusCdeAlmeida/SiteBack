@@ -88,4 +88,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Mailgun
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+   api_key: 'ENV["key-9fe58fe05edc2b8127804db1b3797a75"]',
+   domain: 'https:\\192.168.182.131:3000',
+  }
+
 end
