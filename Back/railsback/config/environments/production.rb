@@ -90,10 +90,15 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Mailgun
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-   api_key: 'ENV["key-9fe58fe05edc2b8127804db1b3797a75"]',
-   domain: 'https:\\192.168.182.131:3000',
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for mailgun
+  ActionMailer::Base.smtp_settings = {
+    :port           => 587,
+    :address        => "smtp.mailgun.org",
+    :domain         => ENV['domain'],
+    :user_name      => ENV['username'],
+    :password       => ENV['password'],
+    :authentication => :plain,
   }
 
 end
