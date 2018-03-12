@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # get 'site/index'
   # resources :sites, :categories
 
-  resources :sites, :categories, defaults: { format: 'json' }
+  resources :sites, :categories, :messages, defaults: { format: 'json' }
 end
